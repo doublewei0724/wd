@@ -3,7 +3,7 @@
     <img src="/bg.jpg" alt="背景圖" class="absolute top-0 left-0 w-full h-full object-cover z-0"
       style="object-fit: fill; object-position: top; pointer-events: none;" />
 
-    <div class="relative z-10 max-w-screen-md mx-auto px-4 py-6">
+    <div class="relative z-10 mx-auto px-4 py-6">
       <!-- 標題 -->
       <h1 class="text-4xl font-bold text-pink-600 font-popgothicB">我們要結婚了！</h1>
       <p class="mt-4 text-xl text-gray-700 font-popgothic">
@@ -39,7 +39,7 @@
       <div class="my-6">
         <h2 class="text-lg font-bold text-gray-800">婚禮地點</h2>
         <p class="text-gray-700">板橋彭園新板館</p>
-        <p class="text-gray-700">220新北市板橋區中山路一段161號1樓宴會B廳</p>
+        <p class="text-gray-700">新北市板橋區中山路一段161號1樓</p>
         <a href="https://www.google.com/maps?q=220%E6%96%B0%E5%8C%97%E5%B8%82%E6%9D%BF%E6%A9%8B%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF%E4%B8%80%E6%AE%B5161%E8%99%9F1%E6%A8%93"
           target="_blank" class="inline-block mt-2 text-blue-600 no-underline">
           點我開啟地圖導航
@@ -48,7 +48,6 @@
 
       <!-- 祝福語 -->
       <div class="my-10 max-w-xl mx-auto">
-        <h2 class="text-xl font-bold text-gray-800">祝福語</h2>
         <p class="mt-2 text-gray-700 leading-relaxed">
           「我們在這一天啟程，迎向人生全新的篇章，誠摯邀請您來分享這份喜悅，感謝您一直以來的祝福與陪伴。」
         </p>
@@ -74,6 +73,7 @@
 import { ref, onMounted, computed } from 'vue'
 import { showImagePreview } from 'vant'
 
+const baseUrl = import.meta.env.BASE_URL;
 const now = new Date()
 const labelMap = {
   days: '天',
@@ -82,18 +82,20 @@ const labelMap = {
   seconds: '秒'
 }
 const photoList = [
-  '/photo1.jpg',
-  '/photo2.jpg',
-  '/photo3.jpg',
-  '/photo4.jpg',
-  '/photo5.jpg',
+  baseUrl + '/photo1.jpg',
+  baseUrl + '/photo3.jpg',
+  baseUrl + '/photo2.jpg',
+  baseUrl + '/photo4.jpg',
+  baseUrl + '/photo6.jpg',
+  baseUrl + '/photo5.jpg',
 ]
 const photoClassList = [
-  'rotate-2',
-  '-rotate-3 translate-y-2',
-  'rotate-1',
-  '-rotate-2 translate-y-1',
-  'rotate-3',
+  'rotate-[3deg]',
+  '-rotate-[4deg] translate-y-1',
+  'rotate-[2deg]',
+  '-rotate-[5deg] translate-y-[2px]',
+  'rotate-[4deg]',
+  '-rotate-[3deg] translate-y-[3px]'
 ]
 const weddingDate = new Date('2025-10-19T00:00:00')
 const weddingEnd = new Date('2025-10-20T00:00:00')
