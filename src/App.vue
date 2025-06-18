@@ -9,7 +9,7 @@
       <p class="mt-4 text-xl text-gray-700 font-popgothic">
         <span class="font-bold text-blue-500">惟誠</span> & <span class="font-bold text-pink-500">羽麗</span>
       </p>
-      <p class="text-gray-700 mt-1">誠摯邀請您一同見證我們的幸福時刻</p>
+      <p class="text-gray-700 mt-2">誠摯邀請您一同見證我們的幸福時刻</p>
 
       <!-- 倒數/提示文字 -->
       <div class="my-8 text-xl font-semibold font-popgothicB">
